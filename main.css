@@ -1,5 +1,5 @@
-﻿/* ADD global reset to help you control your layout
-with border-box - padding and borders are included 
+/* ADD global reset to help you control your layout:
+with border-box padding and borders are included 
 in the width of an element, only margins are outside */
 *,
 *::before,
@@ -41,7 +41,7 @@ header {
     float: right; 
     margin: 0;
     padding-right: 10px;
-    width: 50px; /* add width here instead of inline */
+    width: 50px; /* add width here instead of inline (height is determined based on the width) */
 }
 
 /* target navbar class instead of the header element */ 
@@ -51,12 +51,12 @@ header {
     clear: both;
 }
 
-/* add navbar class to these css selectors 
-so that the styles only apply to the nav, 
+/* add navbar class to all these css selectors. 
+This way the styles only apply to the nav, 
 ul and li elements inside the navbar class */
 
 /* You may have other nav, ul or li elements 
-on your site that you want to style differently */
+on your site that you want to style in a different way */
 .navbar nav {
     float: left;
 }
@@ -90,7 +90,6 @@ on your site that you want to style differently */
     color: red;
 }
 
-
 .welcome {
     margin-top: 50px;
     padding: 50px;
@@ -109,7 +108,7 @@ on your site that you want to style differently */
 }
 
 /* add blogs class to this css selector, because you may have
-other h2 elements that you want to style differently */
+other h2 elements that you want to style in a different way */
 .blogs h2 {
     margin-top: 15px;
     padding-top: 20px;
@@ -117,8 +116,8 @@ other h2 elements that you want to style differently */
     padding-left: 20px;
     text-decoration: underline;
     width: 100%; /* for Flexbox - header will always be full width */
-    /* font-size: 16px; */
-    /* font-family: Arial; not needed as you have already set up Arial as your global font */
+    /* font-size: 16px; already set up as your global font size */
+    /* font-family: Arial; not needed as you have already set up Arial as your global font style */
 }
 
 /*
@@ -178,7 +177,7 @@ other h2 elements that you want to style differently */
         /* for Flexbox - each day section will be half 
         the width of its parent on medium screens */
         width: calc((100% - 90px) / 2); /* 90px = both left margins + 30px space on the right side */
-        margin-right: 0; /* REMOVE right margin as the images are side by side */
+        margin-right: 0; /* REMOVE right margin as the images are now side by side */
     }
 }
 
@@ -202,7 +201,6 @@ other h2 elements that you want to style differently */
     display: table;
     clear: both;
 }
-
 
 .blog img {
     max-width: 40%;
