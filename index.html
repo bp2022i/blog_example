@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -13,24 +13,24 @@
     <header>
         <div class="navbar">
             <!-- CHANGE the alt to something more descriptive: what does the logo signify? -->
-            <!-- REMOVE the inline width and heigh and add them to your css -->
+            <!-- REMOVE the inline width and heigh and add styles to your css instead -->
           <img src="./images/small_white_icon.png" alt="" class="logo">
             <nav>
                 <ul>
                     <!-- add a class for active link and style it differently -->
-                    <li><a href="index.html"  class="link-active">Home</a></li>
+                    <li><a href="index.html" class="link-active">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <!--
-                    <li><a href="daliy life.html"> Daily Life</a></li>
-                    <li><a href="personal development.html"> Personal Development</a></li>
-                    <li><a href="profentional development.html"> Profentional Development</a></li>
-                    <li><a href="about me.html"> About Me</a></li>
+                    <!-- REMOVE the links for now - you can add them when the pages are ready
+                    <li><a href="daliy life.html">Daily Life</a></li>
+                    <li><a href="personal development.html">Personal Development</a></li>
+                    <li><a href="profentional development.html">Profentional Development</a></li>
+                    <li><a href="about me.html">About Me</a></li>
                     -->
                 </ul>
             </nav> 
         </div>
 
-        <!-- MOVE to the header -->
+        <!-- MOVE the welcome section to the header -->
         <div class="welcome">
             <h1>Britteny Park</h1>
             <p>This is a personal blog show casing the web development skills I have learned during the 2020 quarantine</p>
@@ -38,14 +38,12 @@
     </header>
 
     <main>
-        <!-- USE section instead of article and add a class for styling -->
+        <!-- USE section instead of an article element and add a class for styling -->
         <section class="blogs">
             <h2>Posts About Daily Life</h2>
-            <!-- add a div for Flexbox styles -->
-
             <!-- USE div instead of article, because this element is only neceessary for styling purposes -->
-            <!-- USE the same class of each to style them exactly the same way -->
-            <!-- REMOVE the inline width and heigh and add them to your css -->
+            <!-- USE the same class of each day to style them exactly the same way -->
+            <!-- REMOVE the inline width and heigh and add styles to your css -->
             <!-- ADD an alt tag for images: how would you describe the image to a blind person? -->
             <div class="day">
                 <!-- USE the same class for images to style them exactly the same way -->
@@ -58,10 +56,9 @@
                     of London before the cases of COVID-19 have accelerated rapidly.
                 </p>
 
-                <!-- ADD a link to the article page -->
+                <!-- ADD a link to the blog page -->
                 <a href="blog.html">Read more...</a>
             </div>
-
 
             <div class="day">
                 <img class="day-img" src="./images/trafalgar_lockdown.jpg" alt="">
@@ -73,7 +70,7 @@
                     home to be with my family.
                 </p>
 
-                <!-- ADD a link to the article page -->
+                <!-- ADD a link to the blog page -->
                 <a href="blog.html">Read more...</a>
             </div>
 
@@ -89,8 +86,8 @@
                     blog has given me structure in my day because I need to work on the code.
                 </p>
 
-                <!-- ADD a link to the article page -->
-                <a href="blog.html"Read more...</a>
+                <!-- ADD a link to the blog page -->
+                <a href="blog.html">Read more...</a>
             </div>
         </section>
     </main>
