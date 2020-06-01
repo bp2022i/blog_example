@@ -1,0 +1,216 @@
+﻿/* ADD global reset to help you control your layout
+with border-box - padding and borders are included 
+in the width of an element, only margins are outside */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    /* font-family: Arial; 
+    font-size: 14px; */
+    font-family: Arial, Helvetica, sans-serif; /* include fallback fonts */
+    font-size: 16px; /* use minimum of 16px for most of the content */
+    font-weight: 300; 
+    /* margin: 0 auto; */
+    margin: 0; /* remove default margin */
+    background: whitesmoke;
+}
+
+/* ADD relative position to the header element, 
+because you can only use fixed positioning inside 
+an element with a relative positioning */ 
+header {
+    position: relative;
+}
+
+.navbar {
+    /* width: 50px;
+    margin: 0 auto; 
+    overflow: hidden; */
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    background: #393940; 
+    z-index: 3; /* ADD to make sure the fixed navbar is the topmost element */
+    padding: 6px 0 2px 0; /* ADD a bit of padding to the top and bottom */ 
+}
+
+.logo {
+    float: right; 
+    margin: 0;
+    padding-right: 10px;
+    width: 50px; /* add width here instead of inline */
+}
+
+/* target navbar class instead of the header element */ 
+.navbar::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* add navbar class to these css selectors 
+so that the styles only apply to the nav, 
+ul and li elements inside the navbar class */
+
+/* You may have other nav, ul or li elements 
+on your site that you want to style differently */
+.navbar nav {
+    float: left;
+}
+
+.navbar nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar nav li {
+    display: inline-block;
+    /* padding: 15px; */
+}
+
+.navbar nav a {
+    display: block; /* make the link a block level element to add padding */
+    padding: 15px; /* target the link instead of the list element - makes the clickable area bigger */
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+}
+.navbar nav a.link-active {
+    /* ADD a style for an active link - maybe a different colour? */
+    color: red;
+}
+
+.navbar nav a:hover,
+.navbar nav a:active {
+    /* ADD a hover and active state for links - maybe a different colour? */
+    color: red;
+}
+
+
+.welcome {
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+    font-size: large;
+    background: #393940;
+    color: whitesmoke; 
+}
+
+/* ADD Flexbox styles to make your content responsive */
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* ADD maximum width for your content */
+    margin: 0 auto; /* center the content on large screens */
+}
+
+/* add blogs class to this css selector, because you may have
+other h2 elements that you want to style differently */
+.blogs h2 {
+    margin-top: 15px;
+    padding-top: 20px;
+    margin-left: 15px;
+    padding-left: 20px;
+    text-decoration: underline;
+    width: 100%; /* for Flexbox - header will always be full width */
+    /* font-size: 16px; */
+    /* font-family: Arial; not needed as you have already set up Arial as your global font */
+}
+
+/*
+.day1 {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 30px;
+    float: left;
+    width: 40%;
+    background-color: darkgray;
+}
+
+.supportpic {
+    padding-left: 100px; 
+}
+
+.day2 {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px; 
+    padding: 30px;
+    float: right;
+    width: 40%;
+    background-color: darkgray;
+}
+
+.lockdown {
+    padding-left: 30px;
+}
+
+.day3 {
+    margin: 30px;
+    padding: 30px;
+    float: left;
+    width: 40%;
+    background-color: darkgray;
+}
+*/
+
+/* use the same class for all as you're using the same styles for all */
+.day {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px; 
+    padding: 30px;
+    background-color: darkgray;
+}
+
+.day-img {
+    width: 100%; /* makes the width of the image the same as its container minus padding */
+}
+
+/* ADD media queries for different size screens */ 
+@Media only screen and (min-width: 600px) {
+    .day {
+        /* for Flexbox - each day section will be half 
+        the width of its parent on medium screens */
+        width: calc((100% - 90px) / 2); /* 90px = both left margins + 30px space on the right side */
+        margin-right: 0; /* REMOVE right margin as the images are side by side */
+    }
+}
+
+@Media only screen and (min-width: 900px) {
+    .day {
+        /* for Flexbox - each day section will be third 
+        the width of its parent on large screens */
+        width: calc((100% - 120px) / 3); 
+    }
+}
+
+/* PAGE 2 */
+.blog {
+    padding-top: 50px;
+    max-width: 900px; /* ADD maximum width for your content */
+    margin: 0 auto; /* center the content on large screens */
+}
+
+.blog::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.blog img {
+    max-width: 40%;
+    float: right;
+}
+
+@Media only screen and (max-width: 600px) {
+    .blog img {
+        max-width: 100%;
+    }
+}

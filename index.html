@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quarantine Blog</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <!-- CHANGE the alt to something more descriptive: what does the logo signify? -->
+            <!-- REMOVE the inline width and heigh and add them to your css -->
+          <img src="./images/small_white_icon.png" alt="" class="logo">
+            <nav>
+                <ul>
+                    <!-- add a class for active link and style it differently -->
+                    <li><a href="index.html"  class="link-active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <!--
+                    <li><a href="daliy life.html"> Daily Life</a></li>
+                    <li><a href="personal development.html"> Personal Development</a></li>
+                    <li><a href="profentional development.html"> Profentional Development</a></li>
+                    <li><a href="about me.html"> About Me</a></li>
+                    -->
+                </ul>
+            </nav> 
+        </div>
+
+        <!-- MOVE to the header -->
+        <div class="welcome">
+            <h1>Britteny Park</h1>
+            <p>This is a personal blog show casing the web development skills I have learned during the 2020 quarantine</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- USE section instead of article and add a class for styling -->
+        <section class="blogs">
+            <h2>Posts About Daily Life</h2>
+            <!-- add a div for Flexbox styles -->
+
+            <!-- USE div instead of article, because this element is only neceessary for styling purposes -->
+            <!-- USE the same class of each to style them exactly the same way -->
+            <!-- REMOVE the inline width and heigh and add them to your css -->
+            <!-- ADD an alt tag for images: how would you describe the image to a blind person? -->
+            <div class="day">
+                <!-- USE the same class for images to style them exactly the same way -->
+                <img class="day-img" src="./images/coronavirus.jpeg" alt="">
+
+                <h3>Moving Out: The Climbing of COVID-19 Cases</h3>
+
+                <p>
+                    This is the start of my quarantine and my plans to move out 
+                    of London before the cases of COVID-19 have accelerated rapidly.
+                </p>
+
+                <!-- ADD a link to the article page -->
+                <a href="blog.html">Read more...</a>
+            </div>
+
+
+            <div class="day">
+                <img class="day-img" src="./images/trafalgar_lockdown.jpg" alt="">
+
+                <h3>The UK Anounces the Start of Lockdown</h3>
+
+                <p>This was anounced by the Prime Minister Boris Johnson on TV. 
+                    This was only six days after I left London to move back 
+                    home to be with my family.
+                </p>
+
+                <!-- ADD a link to the article page -->
+                <a href="blog.html">Read more...</a>
+            </div>
+
+            <div class="day">
+                <!-- ADD an image for consistency -->
+                <img class="day-img" src="https://placehold.it/400x300" alt="">
+
+                <h3>Why Did You Create this Blog?</h3>
+
+                <p>
+                    The idea of this blog was origenally created as a project 
+                    for my web development class however, the creation of this
+                    blog has given me structure in my day because I need to work on the code.
+                </p>
+
+                <!-- ADD a link to the article page -->
+                <a href="blog.html"Read more...</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
